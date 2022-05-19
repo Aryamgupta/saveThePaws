@@ -202,3 +202,13 @@ console.log(
 document.querySelectorAll(".stp_crousel_images_hover").forEach(function (ele) {
   ele.removeChild(".stp_crousel_btn_bar");
 });
+
+document
+  .querySelector(".stp_logo")
+  .removeChild(document.querySelector(".stp_logo_image"));
+
+const logoLink = document.createElement("a");
+logoLink.setAttribute("href", "index.html");
+logoLink.innerHTML = `<div class="stp_logo_image">    </div>`;
+
+document.querySelector(".stp_logo").appendChild(logoLink);
